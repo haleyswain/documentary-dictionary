@@ -1,11 +1,9 @@
-<h1>Movies</h1>
-
-<ul>
+<div class="container">
   <% @movies.each do |movie| %>
-  <li><%= link_to movie.title, movie_path(movie) %></li>
-  <p><b>Director: </b><%= movie.director %></p>
-  <p><b>Genre: </b><%= movie.genre %></p>
+    <div class="panel panel-default">
+      <div class="panel-title hover">
+        <h3><%= link_to movie.title, movie_path(movie), :style=>'color: #50041B;' %></h3>
+      </div>
+    </div>
   <% end %>
-</ul>
-
-<%= link_to "New Movie", new_movie_path %>
+</div>

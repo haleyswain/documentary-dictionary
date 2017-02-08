@@ -7,8 +7,26 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand"><%= link_to "Documentaries", movies_path, :style=>'color: white;' %></div>
+      </div>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "New Movie", new_movie_path, :style=>'color: white;' %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <body>
-    <%= yield %>
+    <div class="container body-container">
+      <%= yield %>
+    </div>
   </body>
 </html>
