@@ -2,3 +2,4 @@
 <h3><%= @movie.director %></h3>
 <h3><%= @movie.genre %></h3>
 <p><%= link_to "Edit this movie", edit_movie_path(@movie) %></p>
+<p><%= link_to "Delete", movie_path(@movie), :data => {:confirm => "Are you sure?", :method => "delete"} %>
