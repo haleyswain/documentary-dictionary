@@ -1,0 +1,8 @@
+<%= form_for [@movie, @review] do |f| %>
+  <p>Your review: </p><%= f.label :content %>
+  <%= f.text_field :content %>
+  <p><b>Rate from 1-5<%= f.text_field :rating %></b></p>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <p><%= f.submit %></p>
+<% end %>

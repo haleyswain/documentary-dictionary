@@ -1,5 +1,23 @@
 <h1><%= @movie.title %></h1>
 <h3><%= @movie.director %></h3>
 <h3><%= @movie.genre %></h3>
+
+<% if @movie.reviews.any? %>
+  <h5>Reviews:</h5>
+
+    <ul>
+      <li>
+      <% @movie.reviews.each do |review| %>
+      <p><%= review.content %></p>
+      <p>Rating: <%= review.rating %></p>
+      <p>Reviewed By: <%= review.username %></p>
+      <% end %>
+      </li>
+    </ul>
+  <% else %>
+  <p>There aren't any reviews for this movie yet!</p>
+  <% end %>
+
+<p><%= link_to "Review this Movie", new_movie_review_path(@movie) %></p>
 <p><%= link_to "Edit this movie", edit_movie_path(@movie) %></p>
 <p><%= link_to "Delete", movie_path(@movie), :data => {:confirm => "Are you sure?", :method => "delete"} %>
