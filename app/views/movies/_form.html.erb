@@ -1,8 +1,10 @@
-<%= form_for @movie do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :director %>
-  <%= f.text_field :director %>
-  <%= f.select :genre, options_for_select([['Select Genre', ""], 'Nature', 'Food and Health', 'Travel', 'Drama', 'History', 'Other' ]) %>
-  <%= f.submit %>
-<% end %>
+  <%= form_for @movie do |f| %>
+  <div class="container form-background">
+    <div class="input-field"><h2><%= f.label :title %></h2></div>
+      <div class="input-field"><%= f.text_field :title %></div>
+      <div class="input-field"><h2><%= f.label :director %></h2></div>
+      <div class="input-field"><%= f.text_field :director %></div>
+      <div class="input-field"><h2><%= f.label :genre %></h2></div>
+      <div class="input-field"><%= f.text_field :genre %></div>
+    <%= f.submit %>
+  <% end %>

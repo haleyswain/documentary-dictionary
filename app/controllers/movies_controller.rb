@@ -1,9 +1,10 @@
 class MoviesController < ApplicationController
   def index
+  @movies = Movie.all
+  @banana = @movies.shuffle
+  @featured = @banana.first
   if params[:order] == 'title'
     @movies = Movie.all.order('title')
-  else
-    @movies = Movie.all
   end
 end
 

@@ -1,6 +1,8 @@
+<div class="container show-page">
+
 <h1><%= @movie.title %></h1>
-<h3><%= @movie.director %></h3>
-<h3><%= @movie.genre %></h3>
+<h3>Directed By: <%= @movie.director %></h3>
+<h3>Genre: <%= @movie.genre %></h3>
 
 <% if @movie.reviews.any? %>
   <h5>Reviews:</h5>
@@ -9,8 +11,9 @@
       <li>
       <% @movie.reviews.each do |review| %>
       <p><%= review.content %></p>
-      <p>Rating: <%= review.rating %></p>
+      <p>Rating: <h3><%= review.rating %></h3></p>
       <p>Reviewed By: <%= review.username %></p>
+      <hr>
       <% end %>
       </li>
     </ul>
@@ -21,3 +24,4 @@
 <p><%= link_to "Review this Movie", new_movie_review_path(@movie) %></p>
 <p><%= link_to "Edit this movie", edit_movie_path(@movie) %></p>
 <p><%= link_to "Delete", movie_path(@movie), :data => {:confirm => "Are you sure?", :method => "delete"} %>
+</div>
