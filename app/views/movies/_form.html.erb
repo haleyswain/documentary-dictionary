@@ -1,10 +1,10 @@
+<div class="container form-background">
   <%= form_for @movie do |f| %>
-  <div class="container form-background">
-    <div class="input-field"><h2><%= f.label :title %></h2></div>
+    <div class="input-field"><h3>Movie Title:</h3></div>
       <div class="input-field"><%= f.text_field :title %></div>
-      <div class="input-field"><h2><%= f.label :director %></h2></div>
+      <div class="input-field"><h3>Director</h3></div>
       <div class="input-field"><%= f.text_field :director %></div>
-      <div class="input-field"><h2><%= f.label :genre %></h2></div>
-      <div class="input-field"><%= f.text_field :genre %></div>
-    <%= f.submit %>
+      <div class="input-field col s12 drop-down"><%= f.select :genre, options_for_select([['Select Genre', ""], 'Nature', 'Food and Health', 'Travel', 'Drama', 'History', 'Other' ])%></div>
+      <br>
+    <a class="waves-effect waves-light btn"><%= f.submit %></a>
   <% end %>

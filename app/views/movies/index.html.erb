@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="panel panel-default">
+  <div class="panel panel-default feature-panel">
     <h1>Featured Film</h1>
     <h2><%= @featured.title %></h2>
   </div>
   <% @movies.each do |movie| %>
     <div class="panel panel-default">
       <div class="panel-title hover">
-        <h1><%= link_to movie.title, movie_path(movie), :style=>'color: #50041B;' %></h1>
+        <h1><%= link_to movie.title, movie_path(movie), :style=>'color: #1a237e;' %></h1>
         <h5>Directed By</h5>
         <h4><%= movie.director %></h4>
       </div>
@@ -16,6 +16,7 @@
 
 
 
-<%= link_to "Featured", movies_path(@banana) %>
-<%= link_to "Sort Alphabetically", movies_path(order: 'title') %><br>
-<%= link_to "Sort by Date Added", movies_path %>
+
+
+
+<%= link_to "Sort Alphabetically", movies_path(order: 'title') %><%= link_to "Sort by Date Added", movies_path %>

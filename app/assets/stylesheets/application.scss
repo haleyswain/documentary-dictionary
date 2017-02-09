@@ -2,8 +2,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h1 {
+  text-align: center;
+}
+
 body {
-  background-color: #C298C9;
+  background-color: #fff;
+  color: #1a237e;
 }
 
 .body-container {
@@ -16,20 +21,20 @@ body {
 }
 
 .navbar-default {
-  background-color: #561456;
+  background-color: #3949ab;
+  color: white;
   height: 80px;
 }
 
 .panel {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #c5cae9;
   text-align: center;
   padding: 10px;
-  color: #50041B;
   border: none;
 }
 
 .form-background {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #c5cae9;
   padding: 10px;
 }
 
@@ -37,31 +42,47 @@ body {
   text-align: center;
 }
 
+select {
+  display:inline-block;
+}
+
+.select-form {
+  max-width: 200px;
+}
+
 /* form */
   .input-field label {
-    color: #fff;
     font-size: 20px;
   }
   /* label focus color */
   .input-field input[type=text]:focus + label {
-    color: #fff;
   }
   /* label underline focus color */
   .input-field input[type=text]:focus {
     border-bottom: 1px solid #fff;
     box-shadow: 0 1px 0 0 #fff;
+    font-size: 24px;
   }
   /* valid color */
   .input-field input[type=text].valid {
     border-bottom: 1px solid #fff;
     box-shadow: 0 1px 0 0 #fff;
+
   }
   /* invalid color */
   .input-field input[type=text].invalid {
     border-bottom: 1px solid #fff;
     box-shadow: 0 1px 0 0 #fff;
+
   }
   /* icon prefix focus color */
   .input-field .prefix.active {
-    color: #fff;
+  }
+
+  .drop-down {
+    color: black;
+  }
+
+  .feature-panel {
+    border: 2px solid white;
   }
