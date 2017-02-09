@@ -1,8 +1,9 @@
+<br>
 <%= form_for [@movie, @review] do |f| %>
-  <p>Your review: </p><%= f.label :content %>
-  <%= f.text_field :content %>
-  <p><b>Rate from 1-5<%= f.text_field :rating %></b></p>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <p><%= f.submit %></p>
+  <h3>Your review: </h3>
+  <div class="input-field"><%= f.text_field :content %></div>
+  <div class="input-field"><h3>Rate from 1-5</h3><%= f.text_field :rating %></div>
+  <h3>Username</h3>
+  <div class="input-field"><%= f.text_field :username %></div>
+  <button class="waves-effect grey lighten-3 btn"><%= f.submit %></button>
 <% end %>
